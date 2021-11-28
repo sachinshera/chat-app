@@ -68,6 +68,6 @@ io.on('connection', (socket) => {
 })
 
 
-http.listen(3000, () => {
-	console.log("server is started on port 80");
+http.listen(5000, () => {
+	console.log("server is started on port 5000");
 });
