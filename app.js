@@ -1,7 +1,7 @@
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
+const port = process.env.PORT || 3000
 app.get("/", function (req, res) {
 	res.sendFile(__dirname + "/pages/index.html");
 });
@@ -68,6 +68,6 @@ io.on('connection', (socket) => {
 })
 
 
-http.listen(5000, () => {
-	console.log("server is started on port 5000");
+http.listen(port, () => {
+	console.log("server is started on port : - "+port);
 });
